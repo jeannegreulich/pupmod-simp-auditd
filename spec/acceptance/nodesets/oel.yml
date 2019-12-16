@@ -31,6 +31,13 @@ HOSTS:
         gpgkeys:
           - https://packages.chef.io/chef.asc
 
+  oel8:
+    roles:
+      - oel8
+    platform: el-8-x86_64
+    box: generic/oracle8
+    hypervisor: <%= hypervisor %>
+
 CONFIG:
   log_level: verbose
   type: aio
